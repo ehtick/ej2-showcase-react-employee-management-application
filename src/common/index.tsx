@@ -14,9 +14,6 @@ root.render(
   <>
     
     <div className="xyz-management">
-      <div className="xyz-management-header">
-        <div className="header-content">XYZ Software PVT LTD</div>
-      </div>
       <HashRouter>
         <div className="xyz-management-content" style={{ width: '100%' }}>
           <div className="row">
