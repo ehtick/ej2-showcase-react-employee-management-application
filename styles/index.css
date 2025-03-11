@@ -176,17 +176,14 @@
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.07);
   }
   
-  .employeespage .employees-content,
-  .employeeinfopage .employeeinfo-content,
   .policiespage .policies-content,
   .announcementpage .announcement-content,
-  .achievementspage .achievements-content,
-  .employeeinfopage .overview-content {
+  .achievementspage .achievements-content {
     padding: 20px;
   }
   
   .employeeinfopage .overview-header {
-    padding: 20px;
+    padding: 20px 40px;
     border-bottom: 1px solid rgb(0, 0, 0, 0.2);
   }
   
@@ -194,7 +191,7 @@
     text-decoration: none !important;
   }
   .tab-content {
-    padding: 20px 10px 20px 10px;
+    padding: 20px 40px;
   }
 
   .xyz-management-content .e-tab-header {
@@ -456,5 +453,9 @@
   .card-control-section.horizontal_card_layout .card-layout {
     margin: auto;
     max-width: 870px;
+  }
+
+  .overview-content .e-toolbar {
+    box-shadow: none;
   }
   
