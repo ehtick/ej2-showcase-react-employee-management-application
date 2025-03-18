@@ -18,7 +18,7 @@ root.render(
         <div className="xyz-management-content" style={{ width: '100%' }}>
           <div className="row">
             <div className="col-md-2 sidebar">
-            <div className="title">NexGen7 Software PVT LTD</div>
+            <div className="title">NexGen7 Software</div>
               <ul className="nav flex-column">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
