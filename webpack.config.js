@@ -1,13 +1,10 @@
-var glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: {
-    index: glob.sync("./src/**/**/*.tsx")
-  },
+  entry: "./src/common/index.tsx",
   target: "web",
   module: {
     rules: [
@@ -17,10 +14,11 @@ module.exports = {
         use: "ts-loader",
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader"
+          "css-loader",
+          "sass-loader"
         ],
       },
     ],
@@ -40,6 +38,15 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    port: 9000,
+    hot: true,
+    open: true,
+    historyApiFallback: true,
   },
   optimization: {
     minimize: true,
